@@ -4,7 +4,7 @@
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
-          <li><%= link_to "Sign Out", destroy_user_session_path, class: "navbar-links" %></li>
+          <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "navbar-links" %></li>
         <% else %>
           <li><%= link_to "Log In", new_user_session_path, class: "navbar-links" %></li>
         <% end %>

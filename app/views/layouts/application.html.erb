@@ -4,6 +4,8 @@
   <title>SurvivorLeague</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <!-- Added to support delete method for user sign out -->
+  <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tags %>
 </head>
 
