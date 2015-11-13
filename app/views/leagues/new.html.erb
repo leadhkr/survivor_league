@@ -1,12 +1,14 @@
-<%= form_for :league, url: leagues_path do |f| %>
-  <p>
-    <%= f.text_field :league_name, placeholder: "Name Your League" %>
-  </p>
-  <p>
-    <%= f.password_field :password, placeholder: "Password" %>
-  </p>
-  <p>
-    <%= f.password_field :password_confirmation, placeholder: "Confirm Password" %>
-  </p>
-  <%= f.submit%>
-<% end %>
+<div class="league-form">
+  <h3>Create a New League</h3>
+  <%= form_for :league, url: leagues_path do |f| %>
+    <p>
+      <%= f.text_field :league_name, placeholder: "Name Your League", class: "league-form-element" %>
+    </p>
+      <%= f.password_field :password, placeholder: "Password", class: "league-form-element" %>
+    </p>
+    <p>
+      <%= f.password_field :password_confirmation, placeholder: "Confirm Password", class: "league-form-element" %>
+    </p>
+    <%= f.submit "Create", class: "btn btn-success btn-sm league-form-element" %>
+  <% end %>
+</div>
