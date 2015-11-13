@@ -1,0 +1,7 @@
+<% if !user_signed_in? %>
+  <!-- HOMEPAGE FOR USERS NOT SIGNED IN -->
+  <%= render "shared/logged_out_homepage" %>
+<% else %>
+  <!-- HOMEPAGE FOR USERS SIGNED IN -->
+  <%= render "shared/logged_in_homepage" %>
+<% end %>

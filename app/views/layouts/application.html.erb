@@ -6,17 +6,22 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-  <!-- HEADER PARTIAL -->
-  <%= render "shared/header" %>
 
-  <!-- BODY -->
-  <div class="container-fluid">
-    <%= yield %>
-  </div>
+<% if user_signed_in? %>
+  <body>
+<% else %>
+  <body id="background-image">
+<% end %>
+    <!-- HEADER PARTIAL -->
+    <%= render "shared/header" %>
 
-  <!-- FOOTER PARTIAL -->
-  <%= render "shared/footer" %>
+    <!-- BODY -->
+    <div class="container-fluid">
+      <%= yield %>
+    </div>
 
-</body>
+    <!-- FOOTER PARTIAL -->
+    <%= render "shared/footer" %>
+
+  </body>
 </html>
